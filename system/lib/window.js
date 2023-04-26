@@ -27,12 +27,15 @@ $(document).ready(function() {
   });
         const $iframe = $window.find('iframe');
         $iframe.on('load', function() {
-            const iframeWindow = this.contentWindow;
-            iframeWindow.addEventListener('mousedown', function(event) {
-                $window.trigger('mousedown');
-                event.stopPropagation();
-            });
-        });
+    const iframeWindow = this.contentWindow;
+    const handleMouseDown = function(event) {
+        $window.trigger('mousedown');
+        event.stopPropagation();
+        iframeWindow.removeEventListener('mousedown', handleMouseDown);
+    };
+    iframeWindow.addEventListener('mousedown', handleMouseDown);
+});
+
 
         $('body').append($window);
 
@@ -54,9 +57,8 @@ $(document).ready(function() {
                 $window.find('.iframe-overlay').remove();
             }
         });
-
+       $window.css('z-index', zIndexCounter++);
         return $window;
-        $window.css('z-index', zIndexCounter++);
     };
 
     const createButton = (buttonConfig) => {

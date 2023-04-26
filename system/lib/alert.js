@@ -5,5 +5,5 @@ window.addEventListener('load', function() {
             setTimeout(function() {
                 loadingPage.style.display = 'none';
             }, 500);
-        }, 1000);
+        }, 1);
     });
