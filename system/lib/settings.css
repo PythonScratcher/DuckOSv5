@@ -1,0 +1,57 @@
+#settingspage {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: auto;
+  height: auto;
+  transition: all 0.5s ease-in-out;
+  transform-origin: center;
+  z-index: 9999999999999999999999999999;
+}
+
+#settingspage.show {
+  display: block;
+  animation: grow 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  opacity: 1;
+}
+
+#settingspage.hide {
+  animation: shrink 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes grow {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
