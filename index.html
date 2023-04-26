@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DuckOS v5</title>
+  <meta name="description" content="DuckOS. An revolutionary new Operating System (Newer than DuckOS!) that can run fully from your browser. Proxy and games support from Rammerhead and Utopia. Use this web based operating system now to take control of your computer and break free from internet censorship." />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link href="/system/lib/main.css" rel="stylesheet" type="text/css" />
+  <link href="/system/lib/window.css" rel="stylesheet" type="text/css" />
+  <link href="/system/lib/settings.css" rel="stylesheet" type="text/css" />
+  <script src="/system/lib/script.js"></script>
+  <script src="/system/lib/settings.js"></script>
+  <script src="/system/lib/alert.js"></script>
+</head>
+
+<body>
+  <div class="loading-page">
+		<img src="/system/media/loading.gif" alt="Loading..." />
+	</div>
+  <div id="topbar">
+    <span id="settingsbtn" class="animate__animated animate__fadeInDown animate__delay-3s"><i class="fa-solid fa-gear"></i></span>
+    <span onclick="toggleTimeFormat()" class="animate__animated animate__backInDown animate__delay-3s" id="time" class="taskbar_time"></span>
+    <span onclick="toggleFullscreen()" class="animate__animated animate__fadeInDown animate__delay-3s" id="fullscreenbtn"><i class="fa-solid fa-expand"></i></span>
+  </div>
+  <div id="taskbar">
+    <div id="apps"></div>
+    <script src="config.js"></script>
+    <script src="/system/lib/window.js"></script>
+  </div>
+  <div id="settingspage">
+    <h2 align="center">Settings</h2>
+    <hr>
+    <p align="center">Customize how you want DuckOS to look here!</p>
+  </div>
+  <script src="/system/lib/autohide.js"></script>
+</body>
+</html>
