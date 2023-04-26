@@ -112,6 +112,8 @@ body {
      cursor: pointer;
      user-select: none;
      z-index: 9999;
+}.buttondefault:hover {
+     background-color: rgba(0, 0, 0, 0.8);
 }
 #iframeapp {
   border-radius: 15px;
