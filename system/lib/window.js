@@ -18,7 +18,7 @@ $(document).ready(function() {
           <button class="close-btn">x</button>
         </div>
       </div>
-      <iframe src="${iframeSrc}" frameborder="0" style="width: 100%; height: calc(100% - 28px);"></iframe>
+      <iframe src="${iframeSrc}" class="appframe" frameborder="0" style="width: 100%; height: calc(100% - 28px);"></iframe>
     </div>
   `);
       const $closeButton = $window.find('.close-btn');
@@ -27,20 +27,22 @@ $(document).ready(function() {
   });
         const $iframe = $window.find('iframe');
         $iframe.on('load', function() {
-    const iframeWindow = this.contentWindow;
-    const handleMouseDown = function(event) {
-        $window.trigger('mousedown');
-        event.stopPropagation();
-        iframeWindow.removeEventListener('mousedown', handleMouseDown);
-    };
-    iframeWindow.addEventListener('mousedown', handleMouseDown);
-});
+            const iframeWindow = this.contentWindow;
+            const handleMouseDown = function(event) {
+                event.stopPropagation();
+                iframeWindow.removeEventListener('mousedown', handleMouseDown);
+            };
+            iframeWindow.addEventListener('mousedown', handleMouseDown);
+
+            // Remove the border around the iFrame when a directory is linked
+            this.style.border = 'none';
+        });
 
 
         $('body').append($window);
 
         $window.draggable({
-            handle: '.toolbar',
+            handle: '.toolbar, iframe', // Added 'iframe' to the handle
             start: function() {
                 $window.append('<div class="iframe-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: calc(100% - 28px); background-color: transparent;"></div>');
             },
@@ -50,6 +52,7 @@ $(document).ready(function() {
         });
 
         $window.resizable({
+            handles: 'all', // Added this line to enable resizing from all edges and corners
             start: function() {
                 $window.append('<div class="iframe-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: calc(100% - 28px); background-color: transparent;"></div>');
             },
@@ -57,9 +60,10 @@ $(document).ready(function() {
                 $window.find('.iframe-overlay').remove();
             }
         });
-       $window.css('z-index', zIndexCounter++);
+        $window.css('z-index', zIndexCounter++);
         return $window;
     };
+
 
     const createButton = (buttonConfig) => {
         const buttonText = buttonConfig.imgSrc ? '' : buttonConfig.buttonText;
@@ -121,14 +125,12 @@ $(document).ready(function() {
 
 
 
-    $('body').on('click', '.appwindow', function() {
+    $('body').on('mousedown', '.appwindow', function() {
     $(this).css('z-index', zIndexCounter++);
 });
-    $('body').on('mousedown', '.appwindow', function() {
-    const $window = $(this).closest('.appwindow');
-    $window.css('z-index', zIndexCounter++);
-    $window.find('iframe').css('z-index', zIndexCounter++);
-});
+
+  
+  
 
 
     // Cover the iFrame with the overlay during dragging

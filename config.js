@@ -19,13 +19,13 @@ const config = {
       imgSrc: '/apps/meowiegames/meowziesadventurethree/icon.png'
     },
     {
-      id: 'open-window-btn-2s',
-      iframeSrc: 'https://example.org',
-      defaultWidth: 600,
-      defaultHeight: 400,
-      buttonText: 'Open Window 2',
-      windowTitle: 'Window 2',
-      imgSrc: 'path/to/image3.png'
+      id: 'bloxd',
+      iframeSrc: 'https://bloxd.io',
+      defaultWidth: 900,
+      defaultHeight: 600,
+      buttonText: 'Bloxd.io - For the keeds at school',
+      windowTitle: 'Bloxd.io',
+      imgSrc: '/system/media/bloxd_icon.png'
     }
   ]
 };
