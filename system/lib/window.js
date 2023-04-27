@@ -2,13 +2,13 @@ $(document).ready(function() {
     let zIndexCounter = 1;
 
     const createIFrameWindow = (config) => {
-  const {
-    iframeSrc,
-    defaultWidth,
-    defaultHeight,
-    windowTitle
-  } = config;
-  const $window = $(`
+        const {
+            iframeSrc,
+            defaultWidth,
+            defaultHeight,
+            windowTitle
+        } = config;
+        const $window = $(`
     <div class="appwindow" id="appwindow-${config.id}" style="width: ${defaultWidth}px; height: ${defaultHeight}px; top: calc(50% - ${defaultHeight/2}px); left: calc(50% - ${defaultWidth/2}px)">
       <div class="toolbar">
         <h4 class="window-title">${windowTitle}</h4>
@@ -21,10 +21,10 @@ $(document).ready(function() {
       <iframe src="${iframeSrc}" class="appframe" frameborder="0" style="width: 100%; height: calc(100% - 28px);"></iframe>
     </div>
   `);
-      const $closeButton = $window.find('.close-btn');
-  $closeButton.on('click', function() {
-    $window.remove();
-  });
+        const $closeButton = $window.find('.close-btn');
+        $closeButton.on('click', function() {
+            $window.remove();
+        });
         const $iframe = $window.find('iframe');
         $iframe.on('load', function() {
             const iframeWindow = this.contentWindow;
@@ -34,15 +34,32 @@ $(document).ready(function() {
             };
             iframeWindow.addEventListener('mousedown', handleMouseDown);
 
-            // Remove the border around the iFrame when a directory is linked
+            const $window = $(this).closest('.appwindow');
+            $('body').on('mousedown', '.appwindow', function() {
+    const $clickedWindow = $(this);
+    $clickedWindow.css('z-index', zIndexCounter++);
+
+    // Add transparent overlay to all windows except the clicked one
+    $('.appwindow').not($clickedWindow).each(function() {
+        const $window = $(this);
+        if (!$window.find('.iframe-overlay').length) {
+            $window.append('<div class="iframe-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: calc(100% - 28px); background-color: transparent;"></div>');
+        }
+    });
+    $clickedWindow.find('.iframe-overlay').remove();
+});
+
+
             this.style.border = 'none';
         });
+
 
 
         $('body').append($window);
 
         $window.draggable({
-            handle: '.toolbar, iframe', // Added 'iframe' to the handle
+            handle: '.toolbar, iframe',
+            scroll: false,
             start: function() {
                 $window.append('<div class="iframe-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: calc(100% - 28px); background-color: transparent;"></div>');
             },
@@ -50,6 +67,7 @@ $(document).ready(function() {
                 $window.find('.iframe-overlay').remove();
             }
         });
+
 
         $window.resizable({
             handles: 'all', // Added this line to enable resizing from all edges and corners
@@ -126,11 +144,20 @@ $(document).ready(function() {
 
 
     $('body').on('mousedown', '.appwindow', function() {
-    $(this).css('z-index', zIndexCounter++);
-});
+        const $clickedWindow = $(this);
+        $clickedWindow.css('z-index', zIndexCounter++);
 
-  
-  
+        // Add transparent overlay to all windows except the clicked one
+        $('.appwindow').not($clickedWindow).each(function() {
+            const $window = $(this);
+            if (!$window.find('.iframe-overlay').length) {
+                $window.append('<div class="iframe-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: calc(100% - 28px); background-color: transparent;"></div>');
+            }
+        });
+        $clickedWindow.find('.iframe-overlay').remove();
+    });
+
+
 
 
     // Cover the iFrame with the overlay during dragging

@@ -1,8 +1,8 @@
 body {
      overflow: hidden;
 }
- #apps .appwindow {
-     position: absolute;
+#apps .appwindow {
+  position: absolute;
      border: 1px solid transparent;
      background-color: white;
      -webkit-box-shadow: -7px 10px 22px -3px rgba(0,0,0,0.69);
@@ -20,15 +20,15 @@ body {
      box-shadow: -7px 10px 22px -3px rgba(0,0,0,0.69);
      border-radius: 15px;
      user-select: none;
-     pointer-events: auto;
+   pointer-events: auto;
 }
  .toolbar {
      height: 28px;
      display: flex;
      justify-content: space-between;
      align-items: center;
-     background-color: #605757;
-     color: white;
+     background-color: #cdcbcb;
+     color: black;
      padding: 0 4px;
      cursor: move;
      border-top-left-radius: 15px;
@@ -74,8 +74,8 @@ body {
      align-items: center;
      padding: 0;
 }
- .toolbar button.minimize-btn:hover {
-     background-color: #9ba608;
+.toolbar button.minimize-btn:hover {
+  background-color:  #9ba608;
 }
  .toolbar button.maximize-btn {
      background-color: #00ff04;
@@ -89,7 +89,7 @@ body {
      align-items: center;
      padding: 0;
 }
- .toolbar button.maximize-btn:hover {
+.toolbar button.maximize-btn:hover {
      background-color: #07a209;
 }
  .toolbar button.close-btn {
@@ -109,7 +109,7 @@ body {
      background-color: #a80b00;
 }
  .buttondefault {
-     background-color: rgba(0, 0, 0, 0.5);
+     background-color: rgba(255, 255, 255, 1);
      border: none;
      border-radius: 15px;
      width: auto;
@@ -121,55 +121,14 @@ body {
      cursor: pointer;
      user-select: none;
      z-index: 9999;
+}.buttondefault:hover {
+     background-color: rgba(255, 255, 255, 0.5);
 }
-.buttondefault:hover {
-     background-color: rgba(0, 0, 0, 0.8);
+#iframeapp {
+  border-radius: 15px;
+  border: 1px solid transparent;
 }
- #iframeapp {
-     border-radius: 15px;
-     border: 1px solid transparent;
+.appframe {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
- .appframe {
-     border-bottom-left-radius: 15px;
-     border-bottom-right-radius: 15px;
-}
- @keyframes grow {
-     0% {
-         opacity: 0;
-         transform: scale(0.5);
-    }
-     100% {
-         opacity: 1;
-         transform: scale(1);
-    }
-}
- @keyframes shrink {
-     0% {
-         opacity: 1;
-         transform: scale(1);
-    }
-     100% {
-         opacity: 0;
-         transform: scale(0.5);
-    }
-}
- @keyframes squeeze {
-     0% {
-         opacity: 1;
-         height: 100%;
-    }
-     100% {
-         opacity: 0;
-         height: 0;
-    }
-}
- .grow {
-     animation: grow 300ms forwards;
-}
- .shrink {
-     animation: shrink 300ms forwards;
-}
- .squeeze {
-     animation: squeeze 300ms forwards;
-}
- 
