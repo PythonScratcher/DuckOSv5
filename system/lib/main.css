@@ -44,6 +44,9 @@
      display: flex;
      justify-content: center;
      z-index: 9999;
+   -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
 }
  #topbar {
      display: flex;
@@ -64,6 +67,9 @@
      cursor: pointer;
      user-select: none;
      z-index: 9999;
+   -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
 }
  #time:hover {
      background-color: rgba(0, 0, 0, 0.9);
@@ -82,6 +88,9 @@
      cursor: pointer;
      margin-right: 10px;
      z-index: 99;
+   -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
 }
  #settingsbtn:hover {
      background-color: rgba(0, 0, 0, 0.9);
@@ -100,6 +109,9 @@
      cursor: pointer;
      margin-right: 10px;
      z-index: 99;
+   -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
 }
  #fullscreenbtn:hover {
      background-color: rgba(0, 0, 0, 0.9);
