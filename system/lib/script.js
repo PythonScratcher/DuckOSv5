@@ -28,10 +28,14 @@ function initTimeDisplay() {
 }
 
 window.addEventListener("load", function() {
-    document.getElementById("loading").style.display = "none";
+    var loadingElement = document.getElementById("loading");
+    if (loadingElement) {
+        loadingElement.style.display = "none";
+    }
     document.getElementById("DuckOS").style.display = "block";
     initTimeDisplay();
 });
+
 
 setInterval(updateTime, 1000);
 
