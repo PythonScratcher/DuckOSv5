@@ -1,3 +1,4 @@
+// Before you begin to read this code, I want you to know that the comments are badly written as I was kinda rushing to get this done. Thanks! Good luck reading this mid messy code!
 $(document).ready(function() {
     let zIndexCounter = 1;
 
@@ -39,7 +40,7 @@ $(document).ready(function() {
     const $clickedWindow = $(this);
     $clickedWindow.css('z-index', zIndexCounter++);
 
-    // Add transparent overlay to all windows except the clicked one
+    // Add transparent overlay to all windows except the one on top
     $('.appwindow').not($clickedWindow).each(function() {
         const $window = $(this);
         if (!$window.find('.iframe-overlay').length) {
@@ -70,7 +71,7 @@ $(document).ready(function() {
 
 
         $window.resizable({
-            handles: 'all', // Added this line to enable resizing from all edges and corners
+            handles: 'all', //resizing from all corners and sides, instead of listing n nw and etc
             start: function() {
                 $window.append('<div class="iframe-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: calc(100% - 28px); background-color: transparent;"></div>');
             },
@@ -147,7 +148,7 @@ $(document).ready(function() {
         const $clickedWindow = $(this);
         $clickedWindow.css('z-index', zIndexCounter++);
 
-        // Add transparent overlay to all windows except the clicked one
+        // First attempt for transparent overlay, didn't go well 
         $('.appwindow').not($clickedWindow).each(function() {
             const $window = $(this);
             if (!$window.find('.iframe-overlay').length) {
@@ -160,7 +161,7 @@ $(document).ready(function() {
 
 
 
-    // Cover the iFrame with the overlay during dragging
+    // Cover the iFrame with the overlay during dragging so mouse doesn't go over it and make trhe draggin lag
     $('body').on('dragstart', '.appwindow', function() {
         const $window = $(this);
         $window.append('<div class="iframe-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: calc(100% - 28px); background-color: transparent;"></div>');
