@@ -15,7 +15,7 @@
     user-select: none;
     align-self: center;
     background-color: rgba(0, 0, 0, 1);
-    z-index: 999999999999999999999999;
+    z-index: 9999999;
     visibility: hidden;
   padding-left: 10px;
   padding-right: 10px;
