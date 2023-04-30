@@ -41,7 +41,7 @@
     <div id="settingspage">
       <h1 align="center">Settings</h1>
       <p align="center">Customize DuckOS v5 to your will!</p>
-      <hr>
+      <hr class="settingshr">
       <h2 align="center">Change Background Image</h2>
       <div>
         <button align="center" class="wallpaperbtn" onclick="changeBackgroundefualt()">
@@ -61,17 +61,61 @@
       <button align="center" class="imgupload" onclick="uploadBackground()">Upload!</button>
       <br>
       <br>
-      <hr>
+      <hr class="settingshr">
       <h2 align="center">DuckOS Themes</h2>
       <p align="center">Change what theme you want for DuckOS here!</p>
-      <a align="center" class="a-btn" href="/themes/light/lightmode.html">Light Mode (Beware!)</a>
+      <h4>Sorry! Themes are coming soon.</h4>
       <br>
     </div>
     <span id="statscenterbtn" class="animate__animated animate__backInDown animate__delay-3s"><i class="fa-solid fa-envelope"></i></span>
 	<div id="statscenter">
-		<h1>Welcome to DuckOS's Status Center!</h1>
-    <hr>
-    <p>Weather, Notifications (future feature) and just about anything you can think of will be here!</p>
+		<h1>Status/Notification Center</h1>
+    <p>The most useful thing ever to exist on a WebOS...</p>
+    <hr class="statshr">
+    <br>
+    <script>
+        (function(d, s, id) {
+            if (d.getElementById(id)) {
+                if (window.__TOMORROW__) {
+                    window.__TOMORROW__.renderWidget();
+                }
+                return;
+            }
+            const fjs = d.getElementsByTagName(s)[0];
+            const js = d.createElement(s);
+            js.id = id;
+            js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+            fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'tomorrow-sdk');
+        </script>
+
+        <div class="tomorrow"
+           data-location-id=""
+           data-language="EN"
+           data-unit-system="METRIC"
+           data-skin="dark"
+           data-widget-type="summary"
+           style="padding-bottom:22px;position:relative;"
+        >
+          <a
+            href="https://www.tomorrow.io/weather-api/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+            style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;"
+          >
+            <img
+              alt="Powered by the Tomorrow.io Weather API"
+              src="https://weather-website-client.tomorrow.io/img/powered-by.svg"
+              width="250"
+              height="18"
+            />
+          </a>
+        </div>
+    <br>
+    <p>This project is sponsored by...</p>
+    <iframe src="https://hub.alienhub.xyz/show?utm_medium=complex" scrolling="no" width="450" height="150" frameborder="0" class="alienhub" left="50%" margin-top="20px"></iframe>
+    <p>Respect! End internet censorship now by buying Alienhub.</p>
 	</div>
     <script src="/system/lib/stats.js"></script>
     <script src="/system/lib/autohide.js"></script>

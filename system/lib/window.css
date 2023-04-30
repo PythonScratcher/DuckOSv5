@@ -109,7 +109,8 @@ body {
      background-color: #a80b00;
 }
 .buttondefault {
-     background-color: rgba(0, 0, 0, 0.5);
+     background-color: #474343;
+     opacity: 0.5;
      border: none;
      border-radius: 15px;
      width: auto;

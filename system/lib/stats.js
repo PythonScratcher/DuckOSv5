@@ -12,4 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
       statscenter.classList.remove('open');
     }
   });
+
+  statscenter.addEventListener('mouseleave', function() {
+    if (statscenter.classList.contains('open')) {
+      statscenter.classList.remove('open');
+    }
+  });
 });

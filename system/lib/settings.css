@@ -105,11 +105,11 @@
  .imgupload:hover {
      cursor: pointer;
 }
- hr {
+ .settingshr {
      border: 0;
      height: 0;
      box-shadow: 0 0 10px 1px black;
 }
- hr:after {
+ .settingshr:after {
      content: "\00a0";
 }

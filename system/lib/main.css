@@ -30,8 +30,7 @@
      opacity: 0.5 
 }
  #taskbar {
-     background-color: #444142;
-   opacity: 0.5;
+     background-color: rgba(28, 28, 28, 0.8);
      border-radius: 30px;
      bottom: 10px;
      height: 50px;
@@ -55,7 +54,7 @@
      align-items: center;
 }
  #time {
-     background-color: rgba(0, 0, 0, 0.5);
+     background-color: rgba(28, 28, 28, 0.8);
      border-radius: 30px;
      width: auto;
      margin-right: 10px;
@@ -76,7 +75,7 @@
      background-color: rgba(0, 0, 0, 0.9);
 }
  #settingsbtn {
-     background-color: rgba(0, 0, 0, 0.5);
+     background-color: rgba(28, 28, 28, 0.8);
      border-radius: 15px;
      width: auto;
      padding-left: 10px;
@@ -97,7 +96,7 @@
      background-color: rgba(0, 0, 0, 0.9);
 }
  #fullscreenbtn {
-     background-color: rgba(0, 0, 0, 0.5);
+     background-color: rgba(28, 28, 28, 0.8);
      border-radius: 15px;
      width: auto;
      padding-left: 10px;
