@@ -28,6 +28,15 @@ const config = {
       imgSrc: '/system/media/mc.webp'
     },
     {
+      id: 'yt',
+      iframeSrc: 'https://google.pythonscratcher.repl.co/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-',
+      defaultWidth: 900,
+      defaultHeight: 600,
+      buttonText: 'YouTube',
+      windowTitle: 'YouTube',
+      imgSrc: '/system/media/yt.png'
+    },
+    {
       id: 'gba',
       iframeSrc: 'https://gamearchiver.github.io/DuckOS-GBA-Archive/',
       defaultWidth: 900,
