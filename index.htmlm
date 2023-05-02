@@ -68,7 +68,7 @@
       <p align="center">Change what theme you want for DuckOS here!</p>
       <h4>Sorry! Themes are coming soon.</h4>
       <br>
-	    <a href="tos.html">ToS</a>
+	    <a href="tos.html" style="color: white;">ToS</a>
     </div>
     <span id="statscenterbtn" class="animate__animated animate__backInDown animate__delay-3s"><i class="fa-solid fa-envelope"></i></span>
 	<div id="statscenter">
