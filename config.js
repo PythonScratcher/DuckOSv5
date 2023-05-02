@@ -20,11 +20,11 @@ const config = {
     },
     {
       id: 'minecraft',
-      iframeSrc: 'https://old.duckos.xyz/apps/minecraft/game.html',
+      iframeSrc: 'https://duckos.xyz/apps/mc.html',
       defaultWidth: 900,
       defaultHeight: 600,
       buttonText: 'Minecraft',
-      windowTitle: 'Minecraft 1.5.2',
+      windowTitle: 'Minecraft',
       imgSrc: '/system/media/mc.webp'
     },
     {
