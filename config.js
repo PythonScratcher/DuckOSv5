@@ -26,7 +26,7 @@ const config = {
       buttonText: 'Minecraft',
       windowTitle: 'Minecraft 1.5.2',
       imgSrc: '/system/media/mc.webp'
-    }
+    },
     {
       id: 'gba',
       iframeSrc: 'https://gamearchiver.github.io/DuckOS-GBA-Archive/',
