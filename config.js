@@ -20,7 +20,7 @@ const config = {
     },
     {
       id: 'minecraft',
-      iframeSrc: 'https://duckos.xyz/apps/minecraft/game.html',
+      iframeSrc: 'https://old.duckos.xyz/apps/minecraft/game.html',
       defaultWidth: 900,
       defaultHeight: 600,
       buttonText: 'Minecraft',
@@ -34,7 +34,7 @@ const config = {
       defaultHeight: 600,
       buttonText: 'GBA Emulator',
       windowTitle: 'GameBoy Advance Emulator',
-      imgSrc: 'https://duckos.xyz/apps/gta/icon.png'
+      imgSrc: 'https://old.duckos.xyz/apps/gta/icon.png'
     }
   ]
 };
