@@ -33,7 +33,7 @@ const config = {
       defaultWidth: 900,
       defaultHeight: 600,
       buttonText: 'YouTube',
-      windowTitle: 'YouTube',
+      windowTitle: 'YouTube (Slow)',
       imgSrc: '/system/media/yt.png'
     },
     {
