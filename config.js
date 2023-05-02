@@ -19,13 +19,13 @@ const config = {
       imgSrc: '/apps/meowiegames/meowziesadventurethree/icon.png'
     },
     {
-      id: 'bloxd',
-      iframeSrc: 'https://bloxd.io',
+      id: 'minecraft',
+      iframeSrc: 'https://duckos.xyz/apps/minecraft/game.html',
       defaultWidth: 900,
       defaultHeight: 600,
-      buttonText: 'Bloxd.io - For the keeds at school',
-      windowTitle: 'Bloxd.io',
-      imgSrc: '/system/media/bloxd_icon.png'
+      buttonText: 'Minecraft',
+      windowTitle: 'Minecraft 1.5.2',
+      imgSrc: '/system/media/mc.webp'
     }
   ]
 };
