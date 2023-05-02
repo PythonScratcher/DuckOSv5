@@ -27,5 +27,16 @@ const config = {
       windowTitle: 'Minecraft 1.5.2',
       imgSrc: '/system/media/mc.webp'
     }
+    {
+      id: 'gba',
+      iframeSrc: 'https://gamearchiver.github.io/DuckOS-GBA-Archive/',
+      defaultWidth: 900,
+      defaultHeight: 600,
+      buttonText: 'GBA Emulator',
+      windowTitle: 'GameBoy Advance Emulator',
+      imgSrc: 'https://duckos.xyz/apps/gta/icon.png'
+    }
   ]
 };
+
+
