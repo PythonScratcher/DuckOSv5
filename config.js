@@ -37,6 +37,15 @@ const config = {
       imgSrc: '/system/media/yt.png'
     },
     {
+      id: 'yt',
+      iframeSrc: 'https://gamearchiver.github.io/2048',
+      defaultWidth: 900,
+      defaultHeight: 600,
+      buttonText: '2048',
+      windowTitle: '2048',
+      imgSrc: 'https://gamearchiver.github.io/2048/favicon.ico'
+    },
+    {
       id: 'gba',
       iframeSrc: 'https://gamearchiver.github.io/DuckOS-GBA-Archive/',
       defaultWidth: 900,
