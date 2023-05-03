@@ -28,7 +28,7 @@ const config = {
       imgSrc: '/system/media/mc.webp'
     },
     {
-      id: 'tfe',
+      id: 'yt',
       iframeSrc: 'https://google.pythonscratcher.repl.co/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-',
       defaultWidth: 900,
       defaultHeight: 600,
@@ -37,13 +37,22 @@ const config = {
       imgSrc: '/system/media/yt.png'
     },
     {
-      id: 'yt',
+      id: '2048',
       iframeSrc: 'https://gamearchiver.github.io/2048',
       defaultWidth: 900,
       defaultHeight: 600,
       buttonText: '2048',
       windowTitle: '2048',
       imgSrc: 'https://gamearchiver.github.io/2048/favicon.ico'
+    },
+     {
+      id: 'discord',
+      iframeSrc: 'https://duckos.xyz/apps/discord.html',
+      defaultWidth: 900,
+      defaultHeight: 600,
+      buttonText: 'Discord',
+      windowTitle: 'Discord Proxy',
+      imgSrc: 'https://duckos.xyz/apps/discord.png'
     },
     {
       id: 'gba',
