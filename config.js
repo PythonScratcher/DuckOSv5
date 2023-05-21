@@ -2,7 +2,7 @@ const config = {
   buttons: [
     {
       id: 'rammerhead-browser',
-      iframeSrc: 'https://everyone.isageek.net/',
+      iframeSrc: 'https://study.skyhax.lol/',
       defaultWidth: 800,
       defaultHeight: 600,
       buttonText: 'Rammerhead',
@@ -29,7 +29,7 @@ const config = {
     },
     {
       id: 'yt',
-      iframeSrc: 'https://google.pythonscratcher.repl.co/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-',
+      iframeSrc: 'https://study.skyhax.lol/6972318a874b40f7943432fb3d93fd51/_rhsTNP06://SWp.Ku55K06.6G5/',
       defaultWidth: 900,
       defaultHeight: 600,
       buttonText: 'YouTube',
@@ -65,5 +65,4 @@ const config = {
     }
   ]
 };
-
 
