@@ -47,7 +47,7 @@ const config = {
     },
      {
       id: 'discord',
-      iframeSrc: 'https://duckos.xyz/apps/discord.html',
+      iframeSrc: 'https://womginx.arph.org/main/https://discord.com/app',
       defaultWidth: 900,
       defaultHeight: 600,
       buttonText: 'Discord',
